@@ -23,8 +23,7 @@ url: https://github.com/stardew/document/
 # 网站根目录
 root: /document/
 # 文章的 永久链接 格式
-# permalink: :year/:month/:day/:title/
-permalink: :title/
+permalink: :year/:month/:day/:title/
 # 永久链接中各部分的默认值
 permalink_defaults:
 
