@@ -9,11 +9,11 @@
 <meta name="keywords" content="native dom APIs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NativeDomAPIS">
-<meta property="og:url" content="https://github.com/stardew/document/2017/09/02/NativeDomAPIS/index.html">
+<meta property="og:url" content="https://github.com/stardew/2017/09/02/NativeDomAPIS/index.html">
 <meta property="og:site_name" content="weex使用手册">
 <meta property="og:description" content="Native DOM APIsUpdated time: 14/06/2017Weex 在 JS 引擎中，为每个页面都提供了一套 Native DOM APIs，这套接口和 HTML DOM APIs 非常接近，利用这套接口我们可以通过 JavaScript 控制 native 的渲染逻辑。而且 Weex 上层的 Vue 2.0 也是基于这套接口进行适配的。 绝大多数情况下 JS 框架会把 Nat">
 <meta property="og:locale" content="简体中文">
-<meta property="og:updated_time" content="2017-09-21T03:10:34.000Z">
+<meta property="og:updated_time" content="2018-06-25T11:06:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NativeDomAPIS">
 <meta name="twitter:description" content="Native DOM APIsUpdated time: 14/06/2017Weex 在 JS 引擎中，为每个页面都提供了一套 Native DOM APIs，这套接口和 HTML DOM APIs 非常接近，利用这套接口我们可以通过 JavaScript 控制 native 的渲染逻辑。而且 Weex 上层的 Vue 2.0 也是基于这套接口进行适配的。 绝大多数情况下 JS 框架会把 Nat">
@@ -26,8 +26,8 @@
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="/document/css/style.css">
-  <link rel="stylesheet" href="/document/css/new.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/new.css">
   
 
 </head>
@@ -40,11 +40,11 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/document/" id="logo">weex使用手册</a>
+        <a href="/" id="logo">weex使用手册</a>
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/document/" id="subtitle">阿里旗下</a>
+          <a href="/" id="subtitle">阿里旗下</a>
         </h2>
       
     </div>
@@ -52,19 +52,19 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/document/">Home</a>
+          <a class="main-nav-link" href="/">Home</a>
         
-          <a class="main-nav-link" href="/document/archives">Archives</a>
+          <a class="main-nav-link" href="/archives">Archives</a>
         
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github.com/stardew/document"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github.com/stardew"></form>
       </div>
     </div>
   </div>
@@ -72,7 +72,7 @@
       <div class="outer">
         <section id="main"><article id="post-NativeDomAPIS" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/document/2017/09/02/NativeDomAPIS/" class="article-date">
+    <a href="/2017/09/02/NativeDomAPIS/" class="article-date">
   <time datetime="2017-09-01T16:34:34.000Z" itemprop="datePublished">2017-09-01</time>
 </a>
     
@@ -95,16 +95,16 @@
         <h2 id="Native-DOM-APIs"><a href="#Native-DOM-APIs" class="headerlink" title="Native DOM APIs"></a>Native DOM APIs</h2><h6 id="Updated-time-14-06-2017"><a href="#Updated-time-14-06-2017" class="headerlink" title="Updated time: 14/06/2017"></a>Updated time: 14/06/2017</h6><p>Weex 在 JS 引擎中，为每个页面都提供了一套 Native DOM APIs，这套接口和 HTML DOM APIs 非常接近，利用这套接口我们可以通过 JavaScript 控制 native 的渲染逻辑。而且 Weex 上层的 Vue 2.0 也是基于这套接口进行适配的。</p>
 <p>绝大多数情况下 JS 框架会把 Native DOM APIs 都封装好，开发者不需要直接对 Native DOM 进行操作。</p>
 <ul>
-<li><code>Document</code> 类，整个页面文档。</li>
+<li><code>https://github.com/</code> 类，整个页面文档。</li>
 <li><code>Node</code> 类，结点的基础类。</li>
 <li><code>Element</code> 类，元素结点，继承自 <code>Node</code>，单个视图单元。</li>
 <li><code>Comment</code> 类，注释结点，继承自 <code>Node</code>，无实际意义，通常用作占位符。</li>
 </ul>
-<p><strong>每个 Weex 页面都有一个 <code>weex.document</code> 对象，该对象就是一个 <code>Document</code> 类的实例，也是下面所有接口调用的起点。</strong></p>
+<p><strong>每个 Weex 页面都有一个 <code>weex.https://github.com/</code> 对象，该对象就是一个 <code>https://github.com/</code> 类的实例，也是下面所有接口调用的起点。</strong></p>
 <p>接下来详细介绍它们的用法：</p>
-<h3 id="Document-类"><a href="#Document-类" class="headerlink" title="Document 类"></a><sub><code>Document</code></sub> 类</h3><p>每个 <code>Document</code> 实例在创建的时候都会自动拥有一个 <code>documentElement</code> 属性，表示文档结点。该文档结点可以拥有一个 <code>body</code>，即文档的主体结点。</p>
+<h3 id="https-github-com-类"><a href="#https-github-com-类" class="headerlink" title="https://github.com/ 类"></a><sub><code>https://github.com/</code></sub> 类</h3><p>每个 <code>https://github.com/</code> 实例在创建的时候都会自动拥有一个 <code>https://github.com/Element</code> 属性，表示文档结点。该文档结点可以拥有一个 <code>body</code>，即文档的主体结点。</p>
 <p><strong>注意事项:</strong> 文档的主体结点只接受 <code>&lt;div&gt;</code>、<code>&lt;list&gt;</code> 或 <code>&lt;scroller&gt;</code> 三种类型的元素结点。</p>
-<h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><p><code>new Document(id: string, url: string?)</code></p>
+<h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><p><code>new https://github.com/(id: string, url: string?)</code></p>
 <h4 id="成员方法"><a href="#成员方法" class="headerlink" title="成员方法"></a>成员方法</h4><p><strong><code>createElement(tagName: string, props: Object?): Element</code></strong></p>
 <ul>
 <li>创建一个特定类型 <code>tagName</code> 的 <code>Element</code> 实例，即一个元素结点。<code>props</code> 可以包含 <code>attr</code> 对象和 <code>style</code> 对象。比如 <code>createBody(&#39;div&#39;, {style: {backgroundColor:
@@ -116,7 +116,7 @@
 </ul>
 <p><strong><code>createBody(tagName: string, props: Object?): Element</code></strong></p>
 <ul>
-<li>创建文档主体结点，并自动挂载到 <code>documentElement</code> 下。</li>
+<li>创建文档主体结点，并自动挂载到 <code>https://github.com/Element</code> 下。</li>
 </ul>
 <p><strong><code>fireEvent(el: Element, type: string, e: Object?, domChanges: Object?)</code></strong></p>
 <p>触发一个特定类型的事件，并附带一个事件对象 <code>e</code>。当该事件在产生过程中修改了 DOM 的特性或样式，则第四个参数用来描述这些改变，参数格式和上面 <code>createElement</code> 方法的格式相同。</p>
@@ -126,18 +126,18 @@
 </ul>
 <h4 id="只读成员变量"><a href="#只读成员变量" class="headerlink" title="只读成员变量"></a>只读成员变量</h4><p>**<code>id: string</code></p>
 <ul>
-<li>每个 <code>Document</code> 实例都有一个唯一的 <code>id</code>。这同时也是每个 Weex 页面唯一拥有的 <code>id</code>。</li>
+<li>每个 <code>https://github.com/</code> 实例都有一个唯一的 <code>id</code>。这同时也是每个 Weex 页面唯一拥有的 <code>id</code>。</li>
 </ul>
 <p><strong><code>URL: string?</code></strong></p>
 <ul>
 <li>如果当前 Weex 页面有 JS bundle URL 的话，这里则会返回 这个 URL。</li>
 </ul>
 <p><strong><code>body: Element</code></strong></p>
-<p>文档的主体结点，概念类似 HTML DOM 里的 <code>document.body</code>。</p>
-<p><strong><code>documentElement: Element</code></strong></p>
+<p>文档的主体结点，概念类似 HTML DOM 里的 <code>https://github.com/.body</code>。</p>
+<p><strong><code>https://github.com/Element: Element</code></strong></p>
 <ul>
-<li>文档的对应结点，概念类似 HTML DOM 里的 <code>document.documentElement</code>。</li>
-<li><code>body</code> 和 <code>documentElement</code> 的关系是：<code>documentElement</code> 是 <code>body</code> 的父结点。</li>
+<li>文档的对应结点，概念类似 HTML DOM 里的 <code>https://github.com/.https://github.com/Element</code>。</li>
+<li><code>body</code> 和 <code>https://github.com/Element</code> 的关系是：<code>https://github.com/Element</code> 是 <code>body</code> 的父结点。</li>
 </ul>
 <p><strong><code>getRef(id): Node</code></strong></p>
 <ul>
@@ -147,7 +147,7 @@
 <h4 id="成员"><a href="#成员" class="headerlink" title="成员"></a>成员</h4><p><strong><code>destroy()</code></strong></p>
 <h4 id="只读成员变量或方法"><a href="#只读成员变量或方法" class="headerlink" title="只读成员变量或方法"></a>只读成员变量或方法</h4><p><strong><code>ref: string</code></strong></p>
 <ul>
-<li>每个 <code>Node</code> 实例都有各自的在整个 <code>Document</code> 实例中唯一的 <code>ref</code> 值。</li>
+<li>每个 <code>Node</code> 实例都有各自的在整个 <code>https://github.com/</code> 实例中唯一的 <code>ref</code> 值。</li>
 </ul>
 <p><strong><code>nextSibling: Node?</code></strong></p>
 <p><strong><code>previousSibling: Node?</code></strong></p>
@@ -238,10 +238,10 @@ Array}</code>。</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/document/2017/09/02/NativeDomAPIS/" data-id="cjitz4fmv000mldz6v6xwz5v5" class="article-share-link">Partager</a>
+      <a data-url="https://github.com/stardew/2017/09/02/NativeDomAPIS/" data-id="cjiu5lg45000oqcz66f9v68ut" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/document/tags/native-dom-APIs/">native dom APIs</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/native-dom-APIs/">native dom APIs</a></li></ul>
 
     </footer>
   </div>
@@ -249,8 +249,8 @@ Array}</code>。</p>
     
 <nav id="article-nav">
   
-    <a href="/document/2017/09/02/WeexInstanceVariableS/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
+    <a href="/2017/09/02/WeexInstanceVariableS/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
           WeexInstanceVariableS
@@ -259,8 +259,8 @@ Array}</code>。</p>
     </a>
   
   
-    <a href="/document/2017/09/02/commonEvent/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+    <a href="/2017/09/02/commonEvent/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">commonEvent</div>
     </a>
   
@@ -278,9 +278,9 @@ Array}</code>。</p>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/JS-service/">JS service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/Weex-和-Web-平台的差异/">Weex 和 Web 平台的差异</a></li><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/css-单位/">css 单位</a></li><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/native-dom-APIs/">native dom APIs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/web-标准/">web 标准</a></li><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/weex-实例变量/">weex 实例变量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/内建模块/">内建模块</a></li><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/内建组件/">内建组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/通用事件/">通用事件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/通用特性/">通用特性</a></li><li class="tag-list-item"><a class="tag-list-link" href="/document/tags/高阶知识/">高阶知识</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS-service/">JS service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weex-和-Web-平台的差异/">Weex 和 Web 平台的差异</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-单位/">css 单位</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/native-dom-APIs/">native dom APIs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-标准/">web 标准</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weex-实例变量/">weex 实例变量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内建模块/">内建模块</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内建组件/">内建组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/通用事件/">通用事件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/通用特性/">通用特性</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高阶知识/">高阶知识</a></li></ul>
     </div>
   </div>
 
@@ -288,9 +288,9 @@ Array}</code>。</p>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/document/tags/JS-service/" style="font-size: 10px;">JS service</a> <a href="/document/tags/Weex-和-Web-平台的差异/" style="font-size: 14px;">Weex 和 Web 平台的差异</a> <a href="/document/tags/css-单位/" style="font-size: 10px;">css 单位</a> <a href="/document/tags/native-dom-APIs/" style="font-size: 10px;">native dom APIs</a> <a href="/document/tags/vue/" style="font-size: 12px;">vue</a> <a href="/document/tags/web-标准/" style="font-size: 10px;">web 标准</a> <a href="/document/tags/weex-实例变量/" style="font-size: 10px;">weex 实例变量</a> <a href="/document/tags/内建模块/" style="font-size: 18px;">内建模块</a> <a href="/document/tags/内建组件/" style="font-size: 20px;">内建组件</a> <a href="/document/tags/通用事件/" style="font-size: 10px;">通用事件</a> <a href="/document/tags/通用特性/" style="font-size: 18px;">通用特性</a> <a href="/document/tags/高阶知识/" style="font-size: 16px;">高阶知识</a>
+      <a href="/tags/JS-service/" style="font-size: 10px;">JS service</a> <a href="/tags/Weex-和-Web-平台的差异/" style="font-size: 14px;">Weex 和 Web 平台的差异</a> <a href="/tags/css-单位/" style="font-size: 10px;">css 单位</a> <a href="/tags/native-dom-APIs/" style="font-size: 10px;">native dom APIs</a> <a href="/tags/vue/" style="font-size: 12px;">vue</a> <a href="/tags/web-标准/" style="font-size: 10px;">web 标准</a> <a href="/tags/weex-实例变量/" style="font-size: 10px;">weex 实例变量</a> <a href="/tags/内建模块/" style="font-size: 18px;">内建模块</a> <a href="/tags/内建组件/" style="font-size: 20px;">内建组件</a> <a href="/tags/通用事件/" style="font-size: 10px;">通用事件</a> <a href="/tags/通用特性/" style="font-size: 18px;">通用特性</a> <a href="/tags/高阶知识/" style="font-size: 16px;">高阶知识</a>
     </div>
   </div>
 
@@ -299,7 +299,7 @@ Array}</code>。</p>
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/document/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/document/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/document/archives/2017/08/">August 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
     </div>
   </div>
 
@@ -307,28 +307,28 @@ Array}</code>。</p>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/document/2018/06/25/hello-world/">Hello World</a>
+            <a href="/2018/06/25/hello-world/">Hello World</a>
           </li>
         
           <li>
-            <a href="/document/2017/09/02/difference-Weex-Vue2-x/">difference-Weex-Vue2-x</a>
+            <a href="/2017/09/02/difference-Weex-Vue2-x/">difference-Weex-Vue2-x</a>
           </li>
         
           <li>
-            <a href="/document/2017/09/02/migration-from-weex/">migration-from-weex</a>
+            <a href="/2017/09/02/migration-from-weex/">migration-from-weex</a>
           </li>
         
           <li>
-            <a href="/document/2017/09/02/platform-difference/">platform-difference</a>
+            <a href="/2017/09/02/platform-difference/">platform-difference</a>
           </li>
         
           <li>
-            <a href="/document/2017/09/02/migration/">migration</a>
+            <a href="/2017/09/02/migration/">migration</a>
           </li>
         
       </ul>
@@ -344,16 +344,16 @@ Array}</code>。</p>
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 lu.wei<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
     </div>
     <nav id="mobile-nav">
   
-    <a href="/document/" class="mobile-nav-link">Home</a>
+    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/document/archives" class="mobile-nav-link">Archives</a>
+    <a href="/archives" class="mobile-nav-link">Archives</a>
   
 </nav>
     
@@ -361,11 +361,11 @@ Array}</code>。</p>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/document/fancybox/jquery.fancybox.css">
-  <script src="/document/fancybox/jquery.fancybox.pack.js"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/document/js/script.js"></script>
+<script src="/js/script.js"></script>
 
   </div>
 </body>

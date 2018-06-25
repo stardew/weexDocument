@@ -29,7 +29,7 @@ instance.fireGlobalEventCallback(eventName,params);
 ```
 var evt = new Event('some-type')
 evt.data = { foo: 'bar' }
-document.dispatchEvent(evt)
+https://github.com/.dispatchEvent(evt)
 ```
 
 #### 示例

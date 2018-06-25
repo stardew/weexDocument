@@ -9,17 +9,17 @@ tags: Weex 和 Web 平台的差异
 Weex 是一个跨平台解决方案，Web 平台只是其一种运行环境，除此之外还可以在 Android 和 iOS 客户端中运行。原生开发平台和 Web 平台之间的差异，在功能和开发体验上都有一些差异。
 
 ### Weex 环境中没有 DOM
-DOM（Document Object Model），即文档对象模型，是 HTML 和 XML 文档的编程接口，是 Web 中的概念。Weex 的运行环境以原生应用为主，在 Android 和 iOS 环境中渲染出来的是原生的组件，不是 DOM Element。
+DOM（https://github.com/ Object Model），即文档对象模型，是 HTML 和 XML 文档的编程接口，是 Web 中的概念。Weex 的运行环境以原生应用为主，在 Android 和 iOS 环境中渲染出来的是原生的组件，不是 DOM Element。
 
 ### 不支持 DOM 操作
 既然原生环境中不支持 Web API，没有 `Element` 、`Event` 、`File` 等对象，详细列表可以参考 [Web APIs on MDN](https://developer.mozilla
-.org/en-US/docs/Web/API)。不支持选中元素，如 `document.getElementById` 、
-`document.querySelector` 等；当然也不支持基于 DOM API 的程序库（如 jQuery）。
+.org/en-US/docs/Web/API)。不支持选中元素，如 `https://github.com/.getElementById` 、
+`https://github.com/.querySelector` 等；当然也不支持基于 DOM API 的程序库（如 jQuery）。
 
 ## 有限的事件类型
 Weex 支持在标签上绑定事件，和在浏览器中的写法一样，但是 Weex 中的事件是由原生组件捕获并触发的，行为和浏览器中有所不同，事件中的属性也和 Web 中有差异。
 
-* 并不支持 Web 中所有的事件类型，详情请参考[《通用事件》](/document/2017/09/02/commonEvent)。
+* 并不支持 Web 中所有的事件类型，详情请参考[《通用事件》](/https://github.com//2017/09/02/commonEvent)。
 * 不区分事件的捕获阶段和冒泡阶段，相当于 DOM 0 级事件。
 
 ### Weex 环境中没有 BOM
@@ -38,8 +38,8 @@ Weex 中并未提供浏览器中的 `window` 和 `screen` 对象，不支持使�
   * `deviceWidth`: 设备宽度。
   * `deviceHeight`: 设备高度。
 
-### 没有 `document` 对象
-在浏览器中 `document` 表示了当前活动的文档模型，在 Android 和 iOS 环境中并没有这个对象，也不支持与其相关的 DOM 操作。
+### 没有 `https://github.com/` 对象
+在浏览器中 `https://github.com/` 表示了当前活动的文档模型，在 Android 和 iOS 环境中并没有这个对象，也不支持与其相关的 DOM 操作。
 
 ### 没有 `history` 、`location` 、`navigator` 对象
 
