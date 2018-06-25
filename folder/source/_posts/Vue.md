@@ -6,5 +6,5 @@ tags: vue
 
 ## Vue
 ###### Updated time: 14/06/2017
-* [Vue 2.x 在 Weex 和 Web 中的差异](/https://github.com//2017/09/02/difference-with-web)
-* [使用 Vuex 和 vue-router](/https://github.com//2017/09/02/difference-of-vuex)
+* [Vue 2.x 在 Weex 和 Web 中的差异](https://github.com/2017/09/02/difference-with-web)
+* [使用 Vuex 和 vue-router](https://github.com/2017/09/02/difference-of-vuex)
