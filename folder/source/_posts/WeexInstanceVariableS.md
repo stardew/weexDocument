@@ -38,5 +38,5 @@ tags: weex 实例变量
 </script>
 ```
 
-### `weex.https://github.com/: https://github.com/`
+### `weex.document: Document`
 返回当前 Weex 页面的文档对象。

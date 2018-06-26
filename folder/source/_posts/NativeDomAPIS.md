@@ -11,22 +11,22 @@ Weex 在 JS 引擎中，为每个页面都提供了一套 Native DOM APIs，这�
 
 绝大多数情况下 JS 框架会把 Native DOM APIs 都封装好，开发者不需要直接对 Native DOM 进行操作。
 
-* `https://github.com/` 类，整个页面文档。
+* `Document` 类，整个页面文档。
 * `Node` 类，结点的基础类。
 * `Element` 类，元素结点，继承自 `Node`，单个视图单元。
 * `Comment` 类，注释结点，继承自 `Node`，无实际意义，通常用作占位符。
 
-**每个 Weex 页面都有一个 `weex.https://github.com/` 对象，该对象就是一个 `https://github.com/` 类的实例，也是下面所有接口调用的起点。**
+**每个 Weex 页面都有一个 `weex.document` 对象，该对象就是一个 `Document` 类的实例，也是下面所有接口调用的起点。**
 
 接下来详细介绍它们的用法：
 
-### <sub>`https://github.com/`</sub> 类
-每个 `https://github.com/` 实例在创建的时候都会自动拥有一个 `https://github.com/Element` 属性，表示文档结点。该文档结点可以拥有一个 `body`，即文档的主体结点。
+### <sub>`Document`</sub> 类
+每个 `Document` 实例在创建的时候都会自动拥有一个 `documentElement` 属性，表示文档结点。该文档结点可以拥有一个 `body`，即文档的主体结点。
 
 **注意事项:** 文档的主体结点只接受 `<div>`、`<list>` 或 `<scroller>` 三种类型的元素结点。
 
 #### 构造函数
-`new https://github.com/(id: string, url: string?)`
+`new Document(id: string, url: string?)`
 
 #### 成员方法
 **`createElement(tagName: string, props: Object?): Element`**
@@ -40,7 +40,7 @@ Weex 在 JS 引擎中，为每个页面都提供了一套 Native DOM APIs，这�
 
 **`createBody(tagName: string, props: Object?): Element`**
 
-* 创建文档主体结点，并自动挂载到 `https://github.com/Element` 下。
+* 创建文档主体结点，并自动挂载到 `documentElement` 下。
 
 **`fireEvent(el: Element, type: string, e: Object?, domChanges: Object?)`**
 
@@ -53,7 +53,7 @@ Weex 在 JS 引擎中，为每个页面都提供了一套 Native DOM APIs，这�
 #### 只读成员变量
 **`id: string`
 
-* 每个 `https://github.com/` 实例都有一个唯一的 `id`。这同时也是每个 Weex 页面唯一拥有的 `id`。
+* 每个 `Document` 实例都有一个唯一的 `id`。这同时也是每个 Weex 页面唯一拥有的 `id`。
 
 **`URL: string?`**
 
@@ -61,12 +61,12 @@ Weex 在 JS 引擎中，为每个页面都提供了一套 Native DOM APIs，这�
 
 **`body: Element`**
 
-文档的主体结点，概念类似 HTML DOM 里的 `https://github.com/.body`。
+文档的主体结点，概念类似 HTML DOM 里的 `document.body`。
 
-**`https://github.com/Element: Element`**
+**`documentElement: Element`**
 
-* 文档的对应结点，概念类似 HTML DOM 里的 `https://github.com/.https://github.com/Element`。
-* `body` 和 `https://github.com/Element` 的关系是：`https://github.com/Element` 是 `body` 的父结点。
+* 文档的对应结点，概念类似 HTML DOM 里的 `document.documentElement`。
+* `body` 和 `documentElement` 的关系是：`documentElement` 是 `body` 的父结点。
 
 **`getRef(id): Node`**
 
@@ -85,7 +85,7 @@ Weex 在 JS 引擎中，为每个页面都提供了一套 Native DOM APIs，这�
 
 **`ref: string`**
 
-* 每个 `Node` 实例都有各自的在整个 `https://github.com/` 实例中唯一的 `ref` 值。
+* 每个 `Node` 实例都有各自的在整个 `Document` 实例中唯一的 `ref` 值。
 
 **`nextSibling: Node?`**
 

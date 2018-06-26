@@ -111,7 +111,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/cssUnit/" data-id="cjiu5lg6o001gqcz6nez1ajpr" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/cssUnit/" data-id="cjiu6su7f001h3zz69dq0030p" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css-单位/">css 单位</a></li></ul>
@@ -151,7 +151,7 @@
 <li>这是一个实例级别的事件，而非应用级别。</li>
 </ul>
 <h3 id="如何让你的模块支持全局事件"><a href="#如何让你的模块支持全局事件" class="headerlink" title="如何让你的模块支持全局事件"></a>如何让你的模块支持全局事件</h3><p>API 开发完成后，当需要发送事件时，需要通过以下方法：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">  *</span><br><span class="line">  * @param eventName eventName</span><br><span class="line">  * @param <span class="keyword">params</span> event <span class="keyword">params</span></span><br><span class="line">  */</span><br><span class="line">instance.fireGlobalEventCallback(eventName,<span class="keyword">params</span>);</span><br></pre></td></tr></table></figure></p>
-<h3 id="如何在-weex-html5-组件或模块中分发全局事件？只需在文档元素上分派事件："><a href="#如何在-weex-html5-组件或模块中分发全局事件？只需在文档元素上分派事件：" class="headerlink" title="如何在 weex-html5 组件或模块中分发全局事件？只需在文档元素上分派事件："></a>如何在 weex-html5 组件或模块中分发全局事件？只需在文档元素上分派事件：</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> evt = <span class="keyword">new</span> <span class="type">Event</span>(<span class="symbol">'some</span>-<span class="class"><span class="keyword">type</span>')</span></span><br><span class="line"><span class="class"><span class="title">evt</span>.<span class="title">data</span> </span>= &#123; foo: <span class="symbol">'ba</span>r' &#125;</span><br><span class="line">https:<span class="comment">//github.com/.dispatchEvent(evt)</span></span><br></pre></td></tr></table></figure>
+<h3 id="如何在-weex-html5-组件或模块中分发全局事件？只需在文档元素上分派事件："><a href="#如何在-weex-html5-组件或模块中分发全局事件？只需在文档元素上分派事件：" class="headerlink" title="如何在 weex-html5 组件或模块中分发全局事件？只需在文档元素上分派事件："></a>如何在 weex-html5 组件或模块中分发全局事件？只需在文档元素上分派事件：</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> evt = <span class="keyword">new</span> <span class="type">Event</span>(<span class="symbol">'some</span>-<span class="class"><span class="keyword">type</span>')</span></span><br><span class="line"><span class="class"><span class="title">evt</span>.<span class="title">data</span> </span>= &#123; foo: <span class="symbol">'ba</span>r' &#125;</span><br><span class="line">document.dispatchEvent(evt)</span><br></pre></td></tr></table></figure>
 <h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><h5 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h5><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Map</span>&lt;<span class="built_in">String</span>,Object&gt; <span class="keyword">params</span>=<span class="literal">new</span> HashMap&lt;&gt;();</span><br><span class="line"><span class="keyword">params</span>.put(<span class="string">"key"</span>,<span class="string">"value"</span>);</span><br><span class="line">mWXSDKInstance.fireGlobalEventCallback(<span class="string">"geolocation"</span>,<span class="keyword">params</span>);</span><br></pre></td></tr></table></figure>
 <h5 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h5><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[weexInstance fireGlobalEvent:@<span class="string">"geolocation"</span> params:@&#123;@<span class="string">"key"</span>:@<span class="string">"value"</span>&#125;]<span class="comment">;</span></span><br></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><h4 id="addEventListener-String-eventName-String-callback"><a href="#addEventListener-String-eventName-String-callback" class="headerlink" title="addEventListener(String eventName, String callback)"></a><code>addEventListener(String eventName, String callback)</code></h4><p>注册全局事件。</p>
@@ -168,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/globalEvent/" data-id="cjiu5lg8r0024qcz6lq36txia" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/globalEvent/" data-id="cjiu6su8z00273zz660ew3yp6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内建模块/">内建模块</a></li></ul>
@@ -222,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/webview/" data-id="cjiu5lggc003oqcz6kro9jge8" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/webview/" data-id="cjiu6sucy003x3zz6k697bc8h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内建模块/">内建模块</a></li></ul>
@@ -301,7 +301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/stream/" data-id="cjiu5lgf5003eqcz6dkcw60ar" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/stream/" data-id="cjiu6suby003l3zz681kbkxp0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内建模块/">内建模块</a></li></ul>
@@ -394,7 +394,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/storage/" data-id="cjiu5lgew003cqcz6l9cqh1zp" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/storage/" data-id="cjiu6subv003j3zz6u2vlvq41" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内建模块/">内建模块</a></li></ul>
@@ -453,7 +453,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/navigator/" data-id="cjiu5lgcw0032qcz6l5b2bhyb" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/navigator/" data-id="cjiu6suaf00303zz6e07d861r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内建模块/">内建模块</a></li></ul>
@@ -539,7 +539,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/modal/" data-id="cjiu5lgcc002yqcz6tl9n5fiv" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/modal/" data-id="cjiu6sua8002w3zz6nib8duir" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内建模块/">内建模块</a></li></ul>
@@ -600,7 +600,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/dom/" data-id="cjiu5lg960027qcz6rnpveqgj" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/dom/" data-id="cjiu6su84001s3zz68vvfczs8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内建模块/">内建模块</a></li></ul>
@@ -659,7 +659,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/clipboard/" data-id="cjiu5lg6a0019qcz63785e175" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/clipboard/" data-id="cjiu6su7100193zz6j3l3sl7h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内建模块/">内建模块</a></li></ul>
@@ -715,7 +715,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/meta/" data-id="cjiu5lgb7002oqcz66l75s4np" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/meta/" data-id="cjiu6su9r002o3zz61kz42hmh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内建组件/">内建组件</a></li></ul>

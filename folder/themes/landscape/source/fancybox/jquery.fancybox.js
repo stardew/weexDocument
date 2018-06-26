@@ -10,18 +10,18 @@
  *
  */
 
-;(function (window, https://github.com/, $, undefined) {
+;(function (window, document, $, undefined) {
 	"use strict";
 
 	var H = $("html"),
 		W = $(window),
-		D = $(https://github.com/),
+		D = $(document),
 		F = $.fancybox = function () {
 			F.open.apply( this, arguments );
 		},
 		IE =  navigator.userAgent.match(/msie/i),
 		didUpdate	= null,
-		isTouch		= https://github.com/.createTouch !== undefined,
+		isTouch		= document.createTouch !== undefined,
 
 		isQuery	= function(obj) {
 			return obj && obj.hasOwnProperty && obj instanceof $;
@@ -592,7 +592,7 @@
 			if (F.isOpen) {
 				F.current.fitToView = $.type(action) === "boolean" ? action : !F.current.fitToView;
 
-				// Help browser to restore https://github.com/ dimensions
+				// Help browser to restore document dimensions
 				if (isTouch) {
 					F.wrap.removeAttr('style').addClass('fancybox-tmp');
 
@@ -676,8 +676,8 @@
 				return;
 			}
 
-			// Changing https://github.com/ height on iOS devices triggers a 'resize' event,
-			// that can change https://github.com/ height... repeating infinitely
+			// Changing document height on iOS devices triggers a 'resize' event,
+			// that can change document height... repeating infinitely
 			W.bind('orientationchange.fb' + (isTouch ? '' : ' resize.fb') + (current.autoCenter && !current.locked ? ' scroll.fb' : ''), F.update);
 
 			keys = current.keys;
@@ -1223,7 +1223,7 @@
 
 				if (current.autoHeight && iframe.data('ready') === 1) {
 					try {
-						if (iframe[0].contentWindow.https://github.com/.location) {
+						if (iframe[0].contentWindow.document.location) {
 							inner.width( origWidth ).height(9999);
 
 							body = iframe.contents().find('body');
@@ -1792,7 +1792,7 @@
 
 			// jQuery does not return reliable result for IE
 			if (IE) {
-				offsetWidth = Math.max(https://github.com/.https://github.com/Element.offsetWidth, https://github.com/.body.offsetWidth);
+				offsetWidth = Math.max(document.documentElement.offsetWidth, document.body.offsetWidth);
 
 				if (D.width() > offsetWidth) {
 					width = D.width();
@@ -2014,4 +2014,4 @@
 		$("<style type='text/css'>.fancybox-margin{margin-right:" + (w2 - w1) + "px;}</style>").appendTo("head");
 	});
 
-}(window, https://github.com/, jQuery));
+}(window, document, jQuery));

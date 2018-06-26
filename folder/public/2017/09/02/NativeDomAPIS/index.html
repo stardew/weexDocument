@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="weex使用手册">
 <meta property="og:description" content="Native DOM APIsUpdated time: 14/06/2017Weex 在 JS 引擎中，为每个页面都提供了一套 Native DOM APIs，这套接口和 HTML DOM APIs 非常接近，利用这套接口我们可以通过 JavaScript 控制 native 的渲染逻辑。而且 Weex 上层的 Vue 2.0 也是基于这套接口进行适配的。 绝大多数情况下 JS 框架会把 Nat">
 <meta property="og:locale" content="简体中文">
-<meta property="og:updated_time" content="2018-06-25T11:06:08.000Z">
+<meta property="og:updated_time" content="2018-06-25T11:42:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NativeDomAPIS">
 <meta name="twitter:description" content="Native DOM APIsUpdated time: 14/06/2017Weex 在 JS 引擎中，为每个页面都提供了一套 Native DOM APIs，这套接口和 HTML DOM APIs 非常接近，利用这套接口我们可以通过 JavaScript 控制 native 的渲染逻辑。而且 Weex 上层的 Vue 2.0 也是基于这套接口进行适配的。 绝大多数情况下 JS 框架会把 Nat">
@@ -95,16 +95,16 @@
         <h2 id="Native-DOM-APIs"><a href="#Native-DOM-APIs" class="headerlink" title="Native DOM APIs"></a>Native DOM APIs</h2><h6 id="Updated-time-14-06-2017"><a href="#Updated-time-14-06-2017" class="headerlink" title="Updated time: 14/06/2017"></a>Updated time: 14/06/2017</h6><p>Weex 在 JS 引擎中，为每个页面都提供了一套 Native DOM APIs，这套接口和 HTML DOM APIs 非常接近，利用这套接口我们可以通过 JavaScript 控制 native 的渲染逻辑。而且 Weex 上层的 Vue 2.0 也是基于这套接口进行适配的。</p>
 <p>绝大多数情况下 JS 框架会把 Native DOM APIs 都封装好，开发者不需要直接对 Native DOM 进行操作。</p>
 <ul>
-<li><code>https://github.com/</code> 类，整个页面文档。</li>
+<li><code>Document</code> 类，整个页面文档。</li>
 <li><code>Node</code> 类，结点的基础类。</li>
 <li><code>Element</code> 类，元素结点，继承自 <code>Node</code>，单个视图单元。</li>
 <li><code>Comment</code> 类，注释结点，继承自 <code>Node</code>，无实际意义，通常用作占位符。</li>
 </ul>
-<p><strong>每个 Weex 页面都有一个 <code>weex.https://github.com/</code> 对象，该对象就是一个 <code>https://github.com/</code> 类的实例，也是下面所有接口调用的起点。</strong></p>
+<p><strong>每个 Weex 页面都有一个 <code>weex.document</code> 对象，该对象就是一个 <code>Document</code> 类的实例，也是下面所有接口调用的起点。</strong></p>
 <p>接下来详细介绍它们的用法：</p>
-<h3 id="https-github-com-类"><a href="#https-github-com-类" class="headerlink" title="https://github.com/ 类"></a><sub><code>https://github.com/</code></sub> 类</h3><p>每个 <code>https://github.com/</code> 实例在创建的时候都会自动拥有一个 <code>https://github.com/Element</code> 属性，表示文档结点。该文档结点可以拥有一个 <code>body</code>，即文档的主体结点。</p>
+<h3 id="Document-类"><a href="#Document-类" class="headerlink" title="Document 类"></a><sub><code>Document</code></sub> 类</h3><p>每个 <code>Document</code> 实例在创建的时候都会自动拥有一个 <code>documentElement</code> 属性，表示文档结点。该文档结点可以拥有一个 <code>body</code>，即文档的主体结点。</p>
 <p><strong>注意事项:</strong> 文档的主体结点只接受 <code>&lt;div&gt;</code>、<code>&lt;list&gt;</code> 或 <code>&lt;scroller&gt;</code> 三种类型的元素结点。</p>
-<h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><p><code>new https://github.com/(id: string, url: string?)</code></p>
+<h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><p><code>new Document(id: string, url: string?)</code></p>
 <h4 id="成员方法"><a href="#成员方法" class="headerlink" title="成员方法"></a>成员方法</h4><p><strong><code>createElement(tagName: string, props: Object?): Element</code></strong></p>
 <ul>
 <li>创建一个特定类型 <code>tagName</code> 的 <code>Element</code> 实例，即一个元素结点。<code>props</code> 可以包含 <code>attr</code> 对象和 <code>style</code> 对象。比如 <code>createBody(&#39;div&#39;, {style: {backgroundColor:
@@ -116,7 +116,7 @@
 </ul>
 <p><strong><code>createBody(tagName: string, props: Object?): Element</code></strong></p>
 <ul>
-<li>创建文档主体结点，并自动挂载到 <code>https://github.com/Element</code> 下。</li>
+<li>创建文档主体结点，并自动挂载到 <code>documentElement</code> 下。</li>
 </ul>
 <p><strong><code>fireEvent(el: Element, type: string, e: Object?, domChanges: Object?)</code></strong></p>
 <p>触发一个特定类型的事件，并附带一个事件对象 <code>e</code>。当该事件在产生过程中修改了 DOM 的特性或样式，则第四个参数用来描述这些改变，参数格式和上面 <code>createElement</code> 方法的格式相同。</p>
@@ -126,18 +126,18 @@
 </ul>
 <h4 id="只读成员变量"><a href="#只读成员变量" class="headerlink" title="只读成员变量"></a>只读成员变量</h4><p>**<code>id: string</code></p>
 <ul>
-<li>每个 <code>https://github.com/</code> 实例都有一个唯一的 <code>id</code>。这同时也是每个 Weex 页面唯一拥有的 <code>id</code>。</li>
+<li>每个 <code>Document</code> 实例都有一个唯一的 <code>id</code>。这同时也是每个 Weex 页面唯一拥有的 <code>id</code>。</li>
 </ul>
 <p><strong><code>URL: string?</code></strong></p>
 <ul>
 <li>如果当前 Weex 页面有 JS bundle URL 的话，这里则会返回 这个 URL。</li>
 </ul>
 <p><strong><code>body: Element</code></strong></p>
-<p>文档的主体结点，概念类似 HTML DOM 里的 <code>https://github.com/.body</code>。</p>
-<p><strong><code>https://github.com/Element: Element</code></strong></p>
+<p>文档的主体结点，概念类似 HTML DOM 里的 <code>document.body</code>。</p>
+<p><strong><code>documentElement: Element</code></strong></p>
 <ul>
-<li>文档的对应结点，概念类似 HTML DOM 里的 <code>https://github.com/.https://github.com/Element</code>。</li>
-<li><code>body</code> 和 <code>https://github.com/Element</code> 的关系是：<code>https://github.com/Element</code> 是 <code>body</code> 的父结点。</li>
+<li>文档的对应结点，概念类似 HTML DOM 里的 <code>document.documentElement</code>。</li>
+<li><code>body</code> 和 <code>documentElement</code> 的关系是：<code>documentElement</code> 是 <code>body</code> 的父结点。</li>
 </ul>
 <p><strong><code>getRef(id): Node</code></strong></p>
 <ul>
@@ -147,7 +147,7 @@
 <h4 id="成员"><a href="#成员" class="headerlink" title="成员"></a>成员</h4><p><strong><code>destroy()</code></strong></p>
 <h4 id="只读成员变量或方法"><a href="#只读成员变量或方法" class="headerlink" title="只读成员变量或方法"></a>只读成员变量或方法</h4><p><strong><code>ref: string</code></strong></p>
 <ul>
-<li>每个 <code>Node</code> 实例都有各自的在整个 <code>https://github.com/</code> 实例中唯一的 <code>ref</code> 值。</li>
+<li>每个 <code>Node</code> 实例都有各自的在整个 <code>Document</code> 实例中唯一的 <code>ref</code> 值。</li>
 </ul>
 <p><strong><code>nextSibling: Node?</code></strong></p>
 <p><strong><code>previousSibling: Node?</code></strong></p>
@@ -238,7 +238,7 @@ Array}</code>。</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/NativeDomAPIS/" data-id="cjiu5lg45000oqcz66f9v68ut" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/NativeDomAPIS/" data-id="cjiu6su52000m3zz6wmgf3aek" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/native-dom-APIs/">native dom APIs</a></li></ul>

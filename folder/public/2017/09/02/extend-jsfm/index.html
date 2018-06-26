@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="weex使用手册">
 <meta property="og:description" content="拓展 JS frameworkUpdated time: 14/06/2017这部分扩展能力还在讨论尝试中，可能随时会有调整，请留意。 Weex 希望能够尊重尽可能多的开发者的使用习惯，所以除了 Weex 官方支持的 Vue 2.0 之外，开发者还可以定制并横向扩展自己的或自己喜欢的 JS Framework。完整一套 JS Framework 的定制和扩展需要以下几个步骤：  首先你要有一套完整">
 <meta property="og:locale" content="简体中文">
-<meta property="og:updated_time" content="2018-06-25T11:06:08.000Z">
+<meta property="og:updated_time" content="2018-06-25T11:42:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="extend-jsfm">
 <meta name="twitter:description" content="拓展 JS frameworkUpdated time: 14/06/2017这部分扩展能力还在讨论尝试中，可能随时会有调整，请留意。 Weex 希望能够尊重尽可能多的开发者的使用习惯，所以除了 Weex 官方支持的 Vue 2.0 之外，开发者还可以定制并横向扩展自己的或自己喜欢的 JS Framework。完整一套 JS Framework 的定制和扩展需要以下几个步骤：  首先你要有一套完整">
@@ -105,7 +105,7 @@
 <h3 id="Weex-JS-引擎的特性支持情况"><a href="#Weex-JS-引擎的特性支持情况" class="headerlink" title="Weex JS 引擎的特性支持情况"></a>Weex JS 引擎的特性支持情况</h3><ul>
 <li>在 iOS 下，Weex 使用的是系统自带的 JavaScriptCore，所以 ES 支持情况取决于操作系统的版本。目前保守判断，ES5 的特性市面上主流的 iOS 设备都是可以完美支持的，但是 ES6+ 的特性存在一定的碎片化。</li>
 <li>在 Android 下，Weex 使用的是 UC 提供的 v8 内核，出于体积、性能和稳定性的考虑，我们使用的并不是最新版本的 v8 内核，同样的保守判断，ES5 特性能够全部支持，包括严格模式、Object.freeze 等。</li>
-<li>Weex JS 引擎不支持 HTML DOM APIs 和 HTML5 JS APIs，这包括 <a href="https://github.com/">https://github.com/</a>, setTimeout 等。</li>
+<li>Weex JS 引擎不支持 HTML DOM APIs 和 HTML5 JS APIs，这包括 document, setTimeout 等。</li>
 <li>在此基础上，我们加入了 Promise 的 polyfill，以及 console 的 polyfill。</li>
 <li>额外的，为了尽可能的确保 JS 引擎的长效内存管理，我们对一个通用的全局对象进行了 Object.freeze() 冻结操作，这包括：<ul>
 <li><code>Object</code></li>
@@ -126,7 +126,7 @@
 <li><p><code>init(config)</code></p>
 <ul>
 <li><code>config</code><ul>
-<li><code>https://github.com/</code></li>
+<li><code>Document</code></li>
 <li><code>Element</code></li>
 <li><code>Comment</code></li>
 <li><code>TaskSender</code></li>
@@ -196,7 +196,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/stardew/2017/09/02/extend-jsfm/" data-id="cjiu5lg7q001sqcz64i22uaou" class="article-share-link">Share</a>
+      <a data-url="https://github.com/stardew/2017/09/02/extend-jsfm/" data-id="cjiu6su8j00203zz6f021syel" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/高阶知识/">高阶知识</a></li></ul>

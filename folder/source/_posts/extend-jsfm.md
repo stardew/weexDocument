@@ -20,7 +20,7 @@ Weex 希望能够尊重尽可能多的开发者的使用习惯，所以除了 We
 ### Weex JS 引擎的特性支持情况
 * 在 iOS 下，Weex 使用的是系统自带的 JavaScriptCore，所以 ES 支持情况取决于操作系统的版本。目前保守判断，ES5 的特性市面上主流的 iOS 设备都是可以完美支持的，但是 ES6+ 的特性存在一定的碎片化。
 * 在 Android 下，Weex 使用的是 UC 提供的 v8 内核，出于体积、性能和稳定性的考虑，我们使用的并不是最新版本的 v8 内核，同样的保守判断，ES5 特性能够全部支持，包括严格模式、Object.freeze 等。
-* Weex JS 引擎不支持 HTML DOM APIs 和 HTML5 JS APIs，这包括 https://github.com/, setTimeout 等。
+* Weex JS 引擎不支持 HTML DOM APIs 和 HTML5 JS APIs，这包括 document, setTimeout 等。
 * 在此基础上，我们加入了 Promise 的 polyfill，以及 console 的 polyfill。
 * 额外的，为了尽可能的确保 JS 引擎的长效内存管理，我们对一个通用的全局对象进行了 Object.freeze() 冻结操作，这包括：
   * `Object`
@@ -40,7 +40,7 @@ Weex 希望能够尊重尽可能多的开发者的使用习惯，所以除了 We
 #### 框架初始化
 * `init(config)`
   * `config`
-    * `https://github.com/`
+    * `Document`
     * `Element`
     * `Comment`
     * `TaskSender`
