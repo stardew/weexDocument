@@ -1,3 +1,6 @@
+代码使用：newbranch
+
+
 新建项目: hexo init <folder>
 进入: cd <folder>
 安装包: npm install
